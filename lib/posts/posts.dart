@@ -29,12 +29,18 @@ class PostsStates extends State<Posts> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: posts.length,
-        itemBuilder: (BuildContext ctx, int index) {
-          return Post(
-            title: index.toString(),
-          );
-        });
+    return SizedBox(
+      width: 600,
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: ListView.builder(
+            itemCount: posts.length,
+            itemBuilder: (BuildContext ctx, int index) {
+              return Post(
+                title: index.toString(),
+              );
+            }),
+      ),
+    );
   }
 }
