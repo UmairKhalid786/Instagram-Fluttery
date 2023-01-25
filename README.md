@@ -1,16 +1,20 @@
-# instagram_flutter
+# Instagram clone built in flutter
 
-Instagram clone built in flutter
+### Supported clients
 
-## Getting Started
+#### Android
 
-This project is a starting point for a Flutter application.
+![drawing](https://user-images.githubusercontent.com/21205138/214468940-22ca5e72-53f4-4017-aca9-66c9f75699c2.png){ width=50% height=50% }
 
-A few resources to get you started if this is your first Flutter project:
+#### macOS
+![Screenshot 2023-01-25 at 03 40 20](https://user-images.githubusercontent.com/21205138/214469110-5d8cd44d-e848-446a-a300-74509551b126.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### iOS
+![WhatsApp Image 2023-01-25 at 03 39 46](https://user-images.githubusercontent.com/21205138/214469247-444f7e7d-d1bf-4c66-b12c-c52358629b94.jpeg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Web
+![Screenshot 2023-01-25 at 03 40 36](https://user-images.githubusercontent.com/21205138/214469391-f3b44eae-f769-41dd-949b-94d9c0b62f06.png)
+
+
+
+
