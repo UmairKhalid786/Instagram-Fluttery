@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CircularStoryImage extends StatelessWidget {
-  const CircularStoryImage({super.key});
+  final String image;
+  const CircularStoryImage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
-    return const CircleAvatar(
-      backgroundImage: NetworkImage(
-          "https://pbs.twimg.com/profile_images/1304985167476523008/QNHrwL2q_400x400.jpg"),
-      radius: 100,
-    );
+    return Container(
+        padding: const EdgeInsets.all(3),
+        decoration:
+            const BoxDecoration(shape: BoxShape.circle, color: Colors.lightGreen),
+        child: CircleAvatar(
+          backgroundImage: AssetImage("assets/images/user$image.jpg"),
+          radius: 40,
+        ));
   }
 }
