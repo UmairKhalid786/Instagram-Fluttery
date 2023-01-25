@@ -30,6 +30,9 @@ class PostsStates extends State<Posts> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      /* Responsive max width added for larger
+      *  screens when width goes above 600, it will center content
+      * */
       width: 600,
       child: Align(
         alignment: Alignment.topCenter,
