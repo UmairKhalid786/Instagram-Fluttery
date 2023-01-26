@@ -9,7 +9,7 @@ class PostImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1,
-      child: Image(image: AssetImage("assets/images/post$imageIndex.jpg",), fit: BoxFit.fill,),
+      child: Image(image: AssetImage("assets/images/post$imageIndex.jpg"), fit: BoxFit.fill),
     );
   }
 }

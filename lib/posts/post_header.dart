@@ -12,10 +12,6 @@ class PostHeader extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          const Divider(
-            thickness: 1.0,
-            color: Colors.black,
-          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
