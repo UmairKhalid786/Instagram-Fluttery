@@ -37,13 +37,13 @@ class _StoriesListState extends State<StoriesList> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return SizedBox(
-        height: 110,
+        height: 90,
         child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             itemCount: stories.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (BuildContext ctx, int index) {
-              return CircularStoryImage(image: (index % 6).toString());
+              return CircularStoryImage(image: (index % 15).toString());
             }));
   }
 }

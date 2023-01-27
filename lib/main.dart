@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_flutter/posts/posts.dart';
 import 'package:instagram_flutter/stories/stories_list.dart';
 
 import 'config/MyCustomScrollBehavior.dart';
@@ -40,7 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[AppHeader(), StoriesList()],
+            children: const <Widget>[
+              AppHeader(),
+              StoriesList(),
+              Expanded(child: Posts())],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
         );
@@ -67,24 +71,15 @@ class AppHeader extends StatelessWidget {
           Spacer(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              FontAwesomeIcons.squarePlus,
-              size: 24.0
-            ),
+            child: Icon(FontAwesomeIcons.squarePlus, size: 24.0),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              FontAwesomeIcons.heart,
-              size: 24.0
-            ),
+            child: Icon(FontAwesomeIcons.heart, size: 24.0),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              FontAwesomeIcons.facebookMessenger,
-              size: 24.0
-            ),
+            child: Icon(FontAwesomeIcons.facebookMessenger, size: 24.0),
           )
         ],
       ),

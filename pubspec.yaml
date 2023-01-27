@@ -67,6 +67,30 @@ flutter:
     - assets/images/user4.jpg
     - assets/images/user5.jpg
     - assets/images/user6.jpg
+    - assets/images/user7.jpg
+    - assets/images/user8.jpg
+    - assets/images/user9.jpg
+    - assets/images/user10.jpg
+    - assets/images/user11.jpg
+    - assets/images/user12.jpg
+    - assets/images/user13.jpg
+    - assets/images/user14.jpg
+    - assets/images/user15.jpg
+    - assets/images/post0.jpg
+    - assets/images/post1.jpg
+    - assets/images/post2.jpg
+    - assets/images/post3.jpg
+    - assets/images/post4.jpg
+    - assets/images/post5.jpg
+    - assets/images/post6.jpg
+    - assets/images/post7.jpg
+    - assets/images/post8.jpg
+    - assets/images/post9.jpg
+    - assets/images/post10.jpg
+    - assets/images/post11.jpg
+    - assets/images/post12.jpg
+    - assets/images/post13.jpg
+    - assets/images/post14.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
