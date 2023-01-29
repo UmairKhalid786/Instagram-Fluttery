@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:share_plus/share_plus.dart';
 
 class CommonNavigation extends StatelessWidget {
   final String title;
@@ -12,11 +14,20 @@ class CommonNavigation extends StatelessWidget {
 
     return Container(
       padding: const EdgeInsets.all(8.0),
-      decoration: CommonShadow(onPrimary),
+      decoration: CommonShadow(Theme.of(context).colorScheme.primary),
       child: Row(
         children: [
           BackButton(color: onPrimary),
-          Text(title, style: headline?.copyWith(color: onPrimary))
+          Text(title, style: headline?.copyWith(color: onPrimary)),
+          const Spacer(),
+          IconButton(
+              onPressed: () {
+                Share.share('Comment');
+              },
+              icon: Icon(
+                FontAwesomeIcons.shareFromSquare,
+                color: onPrimary,
+              ))
         ],
       ),
     );
