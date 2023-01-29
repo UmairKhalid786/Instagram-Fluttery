@@ -44,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: const <Widget>[
               AppHeader(),
               StoriesList(),
-              Expanded(child: Posts())],
+              Expanded(child: Posts())
+            ],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
         );
@@ -59,25 +60,22 @@ class AppHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
-        children: const [
+        children: [
           Text(
             "Instagram",
             textAlign: TextAlign.start,
-            style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.normal,
-                fontFamily: "Figtree"),
+            style: Theme.of(context).textTheme.headline5,
           ),
-          Spacer(),
-          Padding(
+          const Spacer(),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.squarePlus, size: 24.0),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.heart, size: 24.0),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.facebookMessenger, size: 24.0),
           )

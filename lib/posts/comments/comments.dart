@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_flutter/posts/comments/comment_details.dart';
 
 List<String> comments = [
   "Hi",
@@ -13,7 +14,9 @@ List<String> comments = [
 ];
 
 class Comments extends StatefulWidget {
-  const Comments({super.key});
+  final String title;
+
+  const Comments({super.key, required this.title});
 
   @override
   State<StatefulWidget> createState() => CommentsState();
@@ -30,13 +33,20 @@ class CommentsState extends State<Comments> {
     });
   }
 
+  void _navigateToDetail(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => CommentDetail(userId: widget.title)));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: TextButton(
-          onPressed: () {},
-          child: Text("View all ${comments.length} comments")),
+    return GestureDetector(
+      onTap: () {
+        _navigateToDetail(context);
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Text("View all ${comments.length} comments"),
+      ),
     );
   }
 }

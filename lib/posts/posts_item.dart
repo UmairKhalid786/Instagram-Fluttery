@@ -5,6 +5,8 @@ import 'package:instagram_flutter/posts/post_header.dart';
 import 'package:instagram_flutter/posts/post_image.dart';
 import 'package:instagram_flutter/posts/post_liked_stats_bar.dart';
 
+import 'comments/comments.dart';
+
 class Post extends StatefulWidget {
   final String title;
 
@@ -32,6 +34,7 @@ class PostStates extends State<Post> {
             description: "This is hardcoded description",
             user: widget.title,
           ),
+          Comments(title: widget.title)
         ]);
   }
 }
