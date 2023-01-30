@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:instagram_flutter/posts/comments/comment_view.dart';
 
 import '../models/Comment.dart';
-import '../models/Description.dart';
 
 List<Comment> comments = [
   Comment(userId: "1", commentDetail: "Random description for user 1"),
@@ -19,20 +19,24 @@ List<Comment> comments = [
 
 class CommentDetailScreenContent extends StatefulWidget {
   final String userId;
+
   const CommentDetailScreenContent({super.key, required this.userId});
 
   @override
   State<StatefulWidget> createState() => CommentDetailScreenContentState();
 }
 
-class CommentDetailScreenContentState extends State<CommentDetailScreenContent> {
-
+class CommentDetailScreenContentState
+    extends State<CommentDetailScreenContent> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
         itemCount: comments.length,
         itemBuilder: (BuildContext ctx, int index) {
-          return CommentView(comment: comments.elementAt(index),);
+          return CommentView(
+            comment: comments.elementAt(index),
+            isReplyEnabled: true,
+          );
         });
   }
 }

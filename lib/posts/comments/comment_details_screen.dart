@@ -29,8 +29,8 @@ class CommentDetailScreenState extends State<CommentDetailScreen> {
             children: <Widget>[
               const CommonNavigation(title: "Comments"),
               const SizedBox(height: 8),
-              CommentView(comment: description),
-              const Divider(),
+              CommentView(comment: description, isReplyEnabled: false,),
+              const Divider(height: 1,),
               const Expanded(child: CommentDetailScreenContent(userId: ""))
             ],
           ),

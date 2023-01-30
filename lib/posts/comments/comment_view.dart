@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:instagram_flutter/posts/models/Comment.dart';
 
@@ -5,8 +7,10 @@ import '../../utils/TextUtils.dart';
 
 class CommentView extends StatelessWidget {
   final Comment comment;
+  final bool isReplyEnabled;
 
-  const CommentView({super.key, required this.comment});
+  const CommentView(
+      {super.key, required this.comment, required this.isReplyEnabled});
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +42,27 @@ class CommentView extends StatelessWidget {
                             ["#HelloFlutter", "#FlutterSweden"]),
                         style: const TextStyle(color: Colors.black)),
                   ),
-                  const SizedBox(height: 4,),
-                  Text(
-                    "25w",
-                    style: Theme.of(context).textTheme.caption?.copyWith(fontSize: 10),
-                  )
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Row(children: [
+                    Text(
+                      "25w",
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption
+                          ?.copyWith(fontSize: 10),
+                    ),
+                    const SizedBox(width: 16),
+                    if(isReplyEnabled)
+                    Text(
+                      "Reply",
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption
+                          ?.copyWith(fontSize: 10),
+                    ),
+                  ],)
                 ],
               ),
             ),
