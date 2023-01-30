@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'emotions_list.dart';
+
 class NewCommentEditText extends StatefulWidget {
   final String userId;
 
@@ -13,6 +15,8 @@ class NewCommentEditTextState extends State<NewCommentEditText> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const Divider(height: 1),
+      const EmotionsList(),
       const Divider(height: 1),
       Padding(
         padding: const EdgeInsets.all(8),
