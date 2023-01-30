@@ -15,21 +15,10 @@ class PostDescription extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: RichText(
         text: TextSpan(
-            children: constructTextWithGivenUsers(
+            children: TextUtils.constructTextWithGivenUsers(
                 "User $user", description, ["#HelloFlutter", "#FlutterSweden"]),
             style: const TextStyle(color: Colors.black)),
       ),
     );
-  }
-
-  List<TextSpan> constructTextWithGivenUsers(
-      String user, String description, List<String> tags) {
-    List<TextSpan> spans = [];
-    spans.add(TextUtils.boldTextSpan("$user "));
-    spans.add(TextUtils.normalSpan("$description "));
-    for (var element in tags) {
-      spans.add(TextUtils.coloredSpan("$element ", Colors.blueAccent));
-    }
-    return spans;
   }
 }

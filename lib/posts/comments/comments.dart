@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_flutter/posts/comments/comment_details.dart';
+import 'package:instagram_flutter/posts/comments/comment_details_screen.dart';
 
 List<String> comments = [
   "Hi",
@@ -34,7 +34,7 @@ class CommentsState extends State<Comments> {
   }
 
   void _navigateToDetail(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => CommentDetail(userId: widget.title)));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => CommentDetailScreen(userId: widget.title)));
   }
 
   @override
