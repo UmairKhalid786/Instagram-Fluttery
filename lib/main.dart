@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram_flutter/posts/posts.dart';
 import 'package:instagram_flutter/stories/stories_list.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Instagram Clone',
       scrollBehavior: MyCustomScrollBehavior(),
-      theme: ThemeData(fontFamily: "Figtree"),
+      theme: ThemeData(fontFamily: GoogleFonts.figtree().fontFamily),
       home: const MyHomePage(title: 'Instagram clone'),
     );
   }
@@ -44,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: const <Widget>[
               AppHeader(),
               StoriesList(),
-              Expanded(child: Posts())],
+              Expanded(child: Posts())
+            ],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
         );
@@ -57,27 +59,24 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(16),
       child: Row(
-        children: const [
+        children: [
           Text(
             "Instagram",
             textAlign: TextAlign.start,
-            style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.normal,
-                fontFamily: "Figtree"),
+            style: Theme.of(context).textTheme.headline4?.copyWith(fontFamily: GoogleFonts.grandHotel().fontFamily),
           ),
-          Spacer(),
-          Padding(
+          const Spacer(),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.squarePlus, size: 24.0),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.heart, size: 24.0),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(FontAwesomeIcons.facebookMessenger, size: 24.0),
           )
