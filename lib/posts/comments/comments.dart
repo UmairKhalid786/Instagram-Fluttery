@@ -23,15 +23,6 @@ class Comments extends StatefulWidget {
 }
 
 class CommentsState extends State<Comments> {
-  bool allCommentsVisible = false;
-
-  get callOnPress => null;
-
-  void toggleCommentsVisibility() {
-    setState(() {
-      allCommentsVisible = !allCommentsVisible;
-    });
-  }
 
   void _navigateToDetail(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => CommentDetailScreen(userId: widget.title)));
@@ -45,7 +36,7 @@ class CommentsState extends State<Comments> {
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: Text("View all ${comments.length} comments"),
+        child: Text("View all ${comments.length} comments", style: Theme.of(context).textTheme.caption,),
       ),
     );
   }

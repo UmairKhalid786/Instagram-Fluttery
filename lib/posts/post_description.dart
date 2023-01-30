@@ -12,7 +12,7 @@ class PostDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
       child: RichText(
         text: TextSpan(
             children: TextUtils.constructTextWithGivenUsers(
