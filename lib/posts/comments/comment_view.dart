@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:instagram_flutter/posts/models/Comment.dart';
 
