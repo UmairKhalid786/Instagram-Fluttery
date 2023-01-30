@@ -3,8 +3,8 @@ import 'package:instagram_flutter/posts/comments/comment_view.dart';
 import 'package:instagram_flutter/posts/models/Comment.dart';
 
 import '../../common/common_navigation.dart';
-import '../models/Description.dart';
 import 'comment_details_content.dart';
+import 'new_comment_edittext.dart';
 
 class CommentDetailScreen extends StatefulWidget {
   final String userId;
@@ -30,8 +30,9 @@ class CommentDetailScreenState extends State<CommentDetailScreen> {
               const CommonNavigation(title: "Comments"),
               const SizedBox(height: 8),
               CommentView(comment: description, isReplyEnabled: false,),
-              const Divider(height: 1,),
-              const Expanded(child: CommentDetailScreenContent(userId: ""))
+              const Divider(height: 1),
+              const Expanded(child: CommentDetailScreenContent(userId: "")),
+              const NewCommentEditText(userId: "0")
             ],
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
