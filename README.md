@@ -2,5 +2,3 @@
 
 ### Supported clients
 #### Android, macOS, iOS, Web
-
-
