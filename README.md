@@ -2,3 +2,7 @@
 
 ### Supported clients
 #### Android, macOS, iOS, Web
+
+# Upcoming features 
+- Tests
+- API integrations
