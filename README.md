@@ -6,4 +6,3 @@
 # Upcoming features 
 - Tests
 - API integrations
- 
